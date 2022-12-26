@@ -38,8 +38,6 @@ def validate_login(database_path:str, username:str, password:str) -> bool:
     valid_login = False
     users_dict = file_to_dict(database_path)
     if user_exists(username=username,database_path=database_path):
-        print(users_dict)
-        print(users_dict[username]["password"])
         
         if str(users_dict[username]["password"]) == password:
             valid_login = True
