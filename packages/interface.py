@@ -159,20 +159,3 @@ def delete_database():
         print(print(f"{Fore.MAGENTA}Database hasn't been created yet. Please register new users to see a list.{Fore.RESET}"))
         os.system("pause") 
     
-
-"""
-TESTING:
-"""
-
-if __name__ == '__main__':
-    #true_user = user_exists(username = "julian", database_path = DATABASE_FILE_JSON)
-    #print("USER EXISTS: ", true_user)
-    MENU = {
-    1 : register,
-    2 : delete_user,
-    3 : get_list_of_users,
-    4 : login,
-    5 : delete_database
-}
-    show_menu(MENU)
-    #print(users)
