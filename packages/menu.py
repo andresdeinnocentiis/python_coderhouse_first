@@ -66,10 +66,3 @@ def show_options(list_of_options:list, optional_title:str="") -> None:
     final_str += f"{Fore.YELLOW}0.{Fore.RESET} {Fore.RED}SALIR{Fore.RESET}\n"
     
     print(final_str)
-
-"""
-TESTING    
-"""
-        
-if __name__ == '__main__':    
-    show_menu({1:select_option, 2:show_options, 3:get_max_len})
