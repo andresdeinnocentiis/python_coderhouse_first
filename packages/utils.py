@@ -96,17 +96,4 @@ def get_max_len(list_of_options:list) -> int:
     max_length = len(max)
     
     return max_length
-
-
-
-
-
-  
-"""
-TESTING:    
-"""
-if __name__ == '__main__':
-    users_dict = file_to_dict(DATABASE_FILE_JSON)
-    print(users_dict)
-    dict_to_file(users_dict=users_dict, save_to=DATABASE_FILE_JSON)
    
