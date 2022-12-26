@@ -1,6 +1,5 @@
 from packages.menu import show_menu
 from packages.interface import register, delete_user, get_list_of_users, login, delete_database
-from packages.project_paths import FILE_PATH
 
 
 def main() -> None:
