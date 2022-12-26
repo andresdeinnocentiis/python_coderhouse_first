@@ -29,6 +29,7 @@ def file_to_dict(database_path:str) -> dict:
         elif file_extension == ".csv":
 
             file = pd.read_csv(database_path)
+            file = file.loc[:, ~file.columns.str.contains('^Unnamed')]
             
             users_dict = file.set_index('username').T.to_dict('dict')
             
@@ -70,6 +71,7 @@ def dict_to_file(users_dict:dict, save_to:str) -> None:
                     vals_row.append(sub_val)
             
             users_df = pd.DataFrame(data=rows, columns=list_of_keys)
+            users_df = users_df.loc[:, ~users_df.columns.str.contains('^Unnamed')]
             
             users_df.to_csv(DATABASE_FILE_CSV)
                 
